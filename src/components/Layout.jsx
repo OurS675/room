@@ -12,14 +12,16 @@ const Layout = () => {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       <Navbar />
-      <main className="flex-grow">
-        {navigation.state === "loading" ? (
-          <LoadingSpinner />
-        ) : (
-          <Outlet />
-        )}
+      <main className="flex-grow w-full">
+        <div className="w-full h-full">
+          {navigation.state === "loading" ? (
+            <LoadingSpinner />
+          ) : (
+            <Outlet />
+          )}
+        </div>
       </main>
       <Footer />
     </div>

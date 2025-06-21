@@ -86,17 +86,26 @@ const Projects = () => {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+            gap: '3rem',
+            maxWidth: '1400px',
+            margin: '0 auto',
+            padding: '0 2rem'
           }}>
             {projects.map((project, index) => {
               const [showFullDescription, setShowFullDescription] = useState(false);
               return (
-              <div key={project.id} style={{ textDecoration: 'none' }}>
+              <div key={project.id} style={{ 
+                textDecoration: 'none',
+                height: '100%',
+                display: 'flex'
+              }}>
                 <div className="card" style={{
                   cursor: 'pointer',
                   animation: 'fadeIn 0.5s ease-out forwards',
-                  animationDelay: `${index * 0.1}s`
+                  animationDelay: `${index * 0.1}s`,
+                  width: '100%',
+                  minHeight: '450px'
                 }} >
                   <div className="card-image" style={{
                     backgroundColor: '#e8f5e9',
