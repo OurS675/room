@@ -1,10 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import Layout from '../components/Layout';
-import Home from '../pages/Home';
-import ProjectDetail from '../pages/ProjectDetail';
-import Team from '../pages/Team';
-import Projects from '../pages/Projects';
-import Contact from '../pages/Contact';
+
+const Home = lazy(() => import('../pages/Home'));
+const ProjectDetail = lazy(() => import('../pages/ProjectDetail'));
+const Team = lazy(() => import('../pages/Team'));
+const Projects = lazy(() => import('../pages/Projects'));
+const Contact = lazy(() => import('../pages/Contact'));
+
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+  </div>
+);
 
 export const router = createBrowserRouter([
   {
@@ -13,23 +21,23 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Suspense fallback={<LoadingSpinner />}><Home /></Suspense>,
       },
       {
         path: 'proyecto/:id',
-        element: <ProjectDetail />,
+        element: <Suspense fallback={<LoadingSpinner />}><ProjectDetail /></Suspense>,
       },
       {
         path: 'equipo',
-        element: <Team />,
+        element: <Suspense fallback={<LoadingSpinner />}><Team /></Suspense>,
       },
       {
         path: 'proyectos',
-        element: <Projects />,
+        element: <Suspense fallback={<LoadingSpinner />}><Projects /></Suspense>,
       },
       {
         path: 'contacto',
-        element: <Contact />,
+        element: <Suspense fallback={<LoadingSpinner />}><Contact /></Suspense>,
       },
       {
         path: '*',
