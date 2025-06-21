@@ -1,16 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 py-8 mt-12">
       <div className="container">
         <div className="footer-grid">
           <div className="animate-fadeIn">
-            <h3 className="footer-title">Program</h3>
+            <h3 className="footer-title text-gray-800 dark:text-white">Program</h3>
             <p className="footer-link">
               Innovando y creando soluciones tecnológicas para un futuro mejor.
             </p>
           </div>
           <div className="animate-fadeIn" style={{animationDelay: '0.2s'}}>
-            <h3 className="footer-title">Contacto</h3>
+            <h3 className="footer-title text-gray-800 dark:text-white">Contacto</h3>
             <ul style={{display: 'flex', flexDirection: 'column', gap: '0.75rem'}}>
               <li className="footer-link" style={{display: 'flex', alignItems: 'center'}}>
                 <svg style={{width: '1.25rem', height: '1.25rem', marginRight: '0.5rem'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="animate-fadeIn" style={{animationDelay: '0.4s'}}>
-            <h3 className="footer-title">Síguenos</h3>
+            <h3 className="footer-title text-gray-800 dark:text-white">Síguenos</h3>
             <div style={{display: 'flex', flexDirection: 'column', gap: '0.75rem'}}>
               <a href="#" className="footer-link hover:scale-110 transition-transform duration-300" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 <svg style={{width: '20px', height: '20px'}} fill="currentColor" viewBox="0 0 24 24">
