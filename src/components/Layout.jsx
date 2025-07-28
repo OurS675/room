@@ -20,6 +20,33 @@ const Layout = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    // Asegura que al recargar la página se posicione en la parte superior
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 0);
+  }, []);
+
+  useEffect(() => {
+    // Forzar el desplazamiento a la parte superior después de renderizar
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    };
+
+    handleScrollToTop();
+  }, []);
+
+  useEffect(() => {
+    // Forzar el desplazamiento a la parte superior al cambiar de página
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location]);
+
+  useEffect(() => {
+    // Forzar el desplazamiento a la parte superior al cambiar de página o recargar
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location]);
+
   return (
     <div className="flex flex-col min-h-screen w-full">
       {loading && (
