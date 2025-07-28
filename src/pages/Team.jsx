@@ -149,6 +149,7 @@ const Team = () => {
                       margin: '0 auto',
                       transition: 'background-color 0.3s'
                     }}
+                    className="animate-bounce"
                   >
                     {showFullDescription ? 'Ver menos' : 'Ver más'}
                     <svg

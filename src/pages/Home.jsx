@@ -25,63 +25,64 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <div style={{
-        backgroundColor: 'var(--color-black)',
-        color: 'var(--color-white)',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
         <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to right, rgba(0,100,0,0.2), rgba(0,0,0,0.4))'
-        }}></div>
-        <ParticleBackground />
-        <div className="container text-center" style={{position: 'relative', zIndex: 2}}>
-          <h1 className="animate-fadeIn" style={{
-            fontSize: 'clamp(3rem, 5vw, 5rem)',
-            fontWeight: 'bold',
-            marginBottom: '1.5rem',
-            background: 'linear-gradient(to right, var(--color-primary), #45a049)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Program
-          </h1>
-          <p className="animate-fadeIn" style={{
-            fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
-            color: 'var(--color-gray-300)',
-            maxWidth: '48rem',
-            margin: '0 auto',
-            animationDelay: '0.2s'
-          }}>
-            Transformando ideas en soluciones tecnológicas innovadoras
-          </p>
-          <div className="animate-fadeIn" style={{
-            marginTop: '2rem',
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '1rem',
-            animationDelay: '0.4s'
-          }}>
-            <Link to="/proyectos" className="btn btn-primary">
-              Conoce más
-            </Link>
-            <Link to="/contacto" className="btn btn-outline">
-              Contáctanos
-            </Link>
+          backgroundColor: 'var(--color-black)',
+          color: 'var(--color-white)',
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to right, rgba(0,100,0,0.2), rgba(0,0,0,0.4))'
+          }}></div>
+          <ParticleBackground />
+          <div className="container mx-auto px-4 text-center" style={{position: 'relative', zIndex: 2}}>
+            <h1 className="animate-fadeIn" style={{
+          fontSize: 'clamp(3rem, 5vw, 5rem)',
+          fontWeight: 'bold',
+          marginBottom: '1.5rem',
+          background: 'linear-gradient(to right, var(--color-primary), #45a049)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          WebkitTextFillColor: 'transparent'
+            }}>
+          Program
+            </h1>
+            <p className="animate-fadeIn" style={{
+          fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+          color: 'var(--color-gray-300)',
+          maxWidth: '48rem',
+          margin: '0 auto',
+          animationDelay: '0.2s',
+          padding: '1rem'
+            }}>
+          Transformando ideas en soluciones tecnológicas innovadoras
+            </p>
+            <div
+          className="animate-fadeIn flex flex-col sm:flex-row justify-center items-center mt-8"
+          style={{
+            animationDelay: '0.4s',
+            gap: '1.5rem', // Aumenta el espacio entre los botones
+          }}
+            >
+          <Link to="/proyectos" className="btn btn-primary w-full sm:w-auto px-5 py-3 rounded-lg font-medium shadow transition-colors text-base text-center animate-bounce">
+            Conoce más
+          </Link>
+          <Link to="/contacto" className="btn btn-outline w-full sm:w-auto px-5 py-3 rounded-lg font-medium shadow transition-colors text-base text-center animate-bounce">
+            Contáctanos
+          </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Proyectos Destacados */}
-      <div className="container" style={{padding: '4rem 0'}}>
+        {/* Proyectos Destacados */}
+      <div className="container mx-auto px-4" style={{padding: '4rem 0'}}>
         <h2 style={{
           fontSize: '2rem',
           fontWeight: 'bold',
@@ -102,7 +103,7 @@ const Home = () => {
         }}>
           Descubre algunos de nuestros proyectos más destacados y cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos
         </p>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}

@@ -104,7 +104,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-primary"
+                  className="btn btn-primary animate-bounce"
                   style={{ marginTop: '1rem' }}
                 >
                   Enviar mensaje

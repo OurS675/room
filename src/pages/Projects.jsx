@@ -188,7 +188,7 @@ const Projects = () => {
                           gap: '0.5rem',
                           transition: 'background-color 0.3s'
                         }}
-                      >
+                        className="animate-bounce">
                         {showFullDescription ? 'Ver menos' : 'Ver más'}
                         <svg
                           style={{
@@ -223,7 +223,7 @@ const Projects = () => {
                           gap: '0.5rem',
                           transition: 'background-color 0.3s'
                         }}
-                      >
+                        className="animate-bounce">
                         Ver proyecto
                         <svg
                           style={{

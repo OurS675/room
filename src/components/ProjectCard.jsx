@@ -2,35 +2,18 @@ import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ id, title, description, image }) => {
   return (
-    <div className="card animate-fadeIn">
-      <div className="card-image">
+    <div className="card animate-fadeIn rounded-lg shadow-lg overflow-hidden flex flex-col w-full h-full">
+      <div className="card-image relative w-full h-48 sm:h-56 md:h-64">
           {image ? (
             <img
               src={image}
               alt={title}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                transition: 'transform 0.3s'
-              }}
+              className="w-full h-full object-cover transition-transform duration-300"
             />
           ) : (
-            <div style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: '#e8f5e9',
-              color: 'var(--color-primary)'
-            }}>
+            <div className="flex items-center justify-center w-full h-full bg-green-50 text-primary">
               <svg
-                style={{
-                  width: '3rem',
-                  height: '3rem',
-                  transition: 'transform 0.3s'
-                }}
+                className="w-12 h-12 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -45,23 +28,8 @@ const ProjectCard = ({ id, title, description, image }) => {
               </svg>
             </div>
           )}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            background: 'linear-gradient(to top, rgba(0,0,0,1), transparent)',
-            padding: '1rem'
-          }}>
-            <h3 style={{
-              color: 'var(--color-white)',
-              fontSize: '1.25rem',
-              fontWeight: 'bold',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-              transition: 'color 0.3s'
-            }}>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <h3 className="text-white text-lg font-bold truncate whitespace-nowrap transition-colors duration-300">
               {title}
             </h3>
           </div>
@@ -89,7 +57,7 @@ const ProjectCard = ({ id, title, description, image }) => {
               alignItems: 'center',
               gap: '0.5rem',
               transition: 'background-color 0.3s'
-            }}>
+            }} className="animate-bounce">
               Ver más
               <svg
                 style={{ width: '1rem', height: '1rem' }}
