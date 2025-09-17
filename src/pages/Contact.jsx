@@ -136,7 +136,7 @@ const Contact = () => {
                   color: 'var(--color-primary)'
                 }}>Contacto directo</h2>
                 <p style={{ color: 'var(--color-gray-300)', lineHeight: '1.6' }}>
-                  Email: info@program.com<br />
+                  Email: info@Synaphex.com<br />
                   Teléfono: +34 900 123 456<br />
                   WhatsApp: +34 600 123 456
                 </p>
