@@ -52,7 +52,7 @@ const Home = () => {
           backgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
             }}>
-          Program
+          Synaphex
             </h1>
             <p className="animate-fadeIn" style={{
           fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',

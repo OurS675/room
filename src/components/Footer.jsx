@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="animate-fadeIn">
-            <h3 className="footer-title text-gray-800 dark:text-white">Program</h3>
+            <h3 className="footer-title text-gray-800 dark:text-white">Synaphex</h3>
             <p className="footer-link">
               Innovando y creando soluciones tecnológicas para un futuro mejor.
             </p>
@@ -62,7 +62,7 @@ const Footer = () => {
       <div className="mt-16 py-8 text-center bg-gray-900">
         <div className="container">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Program. Todos los derechos reservados.
+            © {new Date().getFullYear()} Synaphex. Todos los derechos reservados.
           </p>
         </div>
       </div>
